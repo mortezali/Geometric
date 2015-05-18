@@ -42,8 +42,11 @@ public class Recktangle extends GeometricFigure {
 
 	@Override
 	public void graphicsToString() {
-		System.out.println("Fläche: " + areaRecktangle());
-		System.out.println("Zmfang: " + girthReckangle());
+		System.out.println("Der nächste Figur ist ein Kreis" + 
+				"----------------------------------------------------------------------------------\n" +
+				"Fläche: " + areaRecktangle() + "\n" + 
+				"Umfang: " + girthReckangle() + "Der Mittelpunkt des kreises liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
+
 
 		{
 			if (this.quader)
@@ -54,6 +57,8 @@ public class Recktangle extends GeometricFigure {
 
 	@Override
 	public void printGraphics() {
+		
+		System.out.println();
 
 	}
 
