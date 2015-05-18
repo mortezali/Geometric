@@ -2,25 +2,27 @@ package edu.hm.cs.swe2.GeometricFigure;
 
 public class Recktangle extends GeometricFigure {
 
-	private double x;
-	private double y;
+	private double extent;
+	private double direction;
 	private boolean quader;
 
 	public Recktangle(double x, double y, boolean quader) {
-
 		super();
+		this.extent = x;
+		this.direction = y;
+		
 
 	}
 
 	public double girthReckangle() {
 		double result;
 		{
-			if (!this.quader)
-				result = 2 * x + 2 * y;
+			if (setQuader(false))
+				result = 2 * extent + 2 * direction;
 		}
 		{
 
-			result = 4 * x;
+			result = 4 * extent;
 		}
 
 		return result;
@@ -29,13 +31,13 @@ public class Recktangle extends GeometricFigure {
 	public double areaRecktangle() {
 		double result;
 		{
-			if (!this.quader)
+			if (setQuader(false))
 
-				result = x * y;
+				result = extent * direction;
 		}
 		{
 
-			result = x * x;
+			result = extent * extent;
 		}
 		return result;
 	}
@@ -49,7 +51,7 @@ public class Recktangle extends GeometricFigure {
 
 
 		{
-			if (this.quader)
+			if (setQuader(true))
 				System.out.println("Dieser Figur ist sogar ein Quadrat");
 		}
 
@@ -60,6 +62,15 @@ public class Recktangle extends GeometricFigure {
 		
 		System.out.println();
 
+	}
+
+	public boolean isQuader() {
+		return true;
+	}
+
+	public boolean setQuader(boolean quader) {
+		this.quader = true;
+		return quader;
 	}
 
 }
