@@ -1,7 +1,7 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
 public class Trieangle extends GeometricFigure {
-	private double extent;
+	private double xExtent;
 	private double hight;
 
 	public Trieangle(double x, double y) {
@@ -13,16 +13,18 @@ public class Trieangle extends GeometricFigure {
 
 	public double girthTrieangle() {
 		double result;
+		//U = 2a+c => 2x7 + X => 14+X
 
-		result = 4 * extent;
+		result = 2* xExtent + hight;
 
 		return result;
 	}
+	// A = 0,5.c.h => 0,5c.4
 
 	public double areatrieangle() {
 		double result;
 
-		result = extent * extent;
+		result = xExtent * xExtent;
 
 		return result;
 	}
@@ -48,11 +50,11 @@ public class Trieangle extends GeometricFigure {
 	}
 
 	public double getExtent() {
-		return extent;
+		return xExtent;
 	}
 
 	public void setExtent(double extent) {
-		this.extent = extent;
+		this.xExtent = xExtent;
 	}
 
 }

@@ -2,14 +2,14 @@ package edu.hm.cs.swe2.GeometricFigure;
 
 public class Recktangle extends GeometricFigure {
 
-	private double extent;
-	private double direction;
+	private double xExtent;
+	private double yExtent;
 	private boolean quader;
 
 	public Recktangle(double x, double y, boolean quader) {
 		super();
-		this.extent = x;
-		this.direction = y;
+		this.xExtent = x;
+		this.yExtent = y;
 		
 
 	}
@@ -18,11 +18,11 @@ public class Recktangle extends GeometricFigure {
 		double result;
 		{
 			if (setQuader(false))
-				result = 2 * extent + 2 * direction;
+				result = 2 * xExtent + 2 * yExtent;
 		}
 		{
 
-			result = 4 * extent;
+			result = 4 * xExtent;
 		}
 
 		return result;
@@ -33,11 +33,11 @@ public class Recktangle extends GeometricFigure {
 		{
 			if (setQuader(false))
 
-				result = extent * direction;
+				result = xExtent * yExtent;
 		}
 		{
 
-			result = extent * extent;
+			result = xExtent * xExtent;
 		}
 		return result;
 	}
