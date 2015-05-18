@@ -6,7 +6,7 @@ public class Recktangle extends GeometricFigure {
 	private double y;
 	private boolean quader;
 
-	public Recktangle(double a, double b) {
+	public Recktangle(double x, double y, boolean quader) {
 
 		super();
 
@@ -14,32 +14,47 @@ public class Recktangle extends GeometricFigure {
 
 	public double girthReckangle() {
 		double result;
-		result = 2 * x + 2 * y;
 		{
-			if (x == y)
-				result = 4 * x;
+			if (!this.quader)
+				result = 2 * x + 2 * y;
 		}
+		{
+
+			result = 4 * x;
+		}
+
 		return result;
 	}
 
 	public double areaRecktangle() {
 		double result;
-		result = x * y;
 		{
-			if (x == y)
-				result = x * x;
+			if (!this.quader)
+
+				result = x * y;
+		}
+		{
+
+			result = x * x;
 		}
 		return result;
 	}
 
 	@Override
-	public String graphicsToString() {
-		return graphicsToString();
+	public void graphicsToString() {
+		System.out.println("Fläche: " + areaRecktangle());
+		System.out.println("Zmfang: " + girthReckangle());
+
+		{
+			if (this.quader)
+				System.out.println("Dieser Figur ist sogar ein Quadrat");
+		}
+
 	}
 
 	@Override
-	public String printGraphics() {
-		return printGraphics();
+	public void printGraphics() {
+
 	}
 
 }
