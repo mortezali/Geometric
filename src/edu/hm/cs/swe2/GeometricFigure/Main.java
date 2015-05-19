@@ -4,8 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//GeometricFigure[] figures = new GeometricFigure
-
-	}
-
+		GeometricFigure[] figures = new GeometricFigure[5];
+			figures[0] =  (5, 7, 4); 
+			
+}
 }
