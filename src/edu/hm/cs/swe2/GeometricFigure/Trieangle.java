@@ -4,10 +4,10 @@ public class Trieangle extends GeometricFigure {
 	private double xExtent;
 	private double hight;
 
-	public Trieangle(int xOffset, double x, double y) {
-		super();
-		this.setExtent(x);
-		this.setHight(y);
+	public Trieangle(int xOffset, double xExtent, double hight) {
+		super(xOffset);
+		this.xExtent = xExtent;
+		this.hight = hight;
 
 	}
 
@@ -24,7 +24,7 @@ public class Trieangle extends GeometricFigure {
 	public double areaTrieangle() {
 		double result;
 
-		result = xExtent * xExtent;
+		result = xExtent * hight;
 
 		return result;
 	}
@@ -54,10 +54,10 @@ public class Trieangle extends GeometricFigure {
 	}
 
 	public double getExtent() {
-		return xExtent;
+		return this.xExtent;
 	}
 
-	public void setExtent(double extent) {
+	public void setExtent(double xExtent) {
 		this.xExtent = xExtent;
 	}
 
