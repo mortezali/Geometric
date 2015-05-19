@@ -15,11 +15,11 @@ public class Trieangle extends GeometricFigure {
 		double result;
 		//U = 2a+c => 2x7 + X => 14+X
 
-		result = 2* xExtent + hight;
+		result = 4 * xExtent / 2;
 
 		return result;
 	}
-	// A = 0,5.c.h => 0,5c.4
+	// A = 0.5xcxh => 0,5c.4
 
 	public double areatrieangle() {
 		double result;
