@@ -1,18 +1,18 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
 public abstract class GeometricFigure {
-
-	protected static int xOffset;
-	protected static String infotext;
 	
-	public GeometricFigure( int xOffset){
-		
-		this.xOffset = xOffset;
-		
+	protected static int xOffset;
+	protected String infotext;
+
+	public GeometricFigure(int xOffset) {
+
+		GeometricFigure.xOffset = xOffset;
+
 	}
 
 	public String toString() {
-		return getInfotext();
+		return infotext;
 
 	}
 
@@ -23,21 +23,13 @@ public abstract class GeometricFigure {
 	public abstract void graphicsToString();
 
 	public abstract void printGraphics();
+	
+	public abstract double girth();
+	
+	public abstract double area();
 
 	public static int getxOffset() {
 		return xOffset;
-	}
-
-	public void setxOffset(int xOffset) {
-		this.xOffset = xOffset;
-	}
-
-	public String getInfotext() {
-		return this.infotext;
-	}
-
-	public void setInfotext(String infotext) {
-		this.infotext = infotext;
 	}
 
 }

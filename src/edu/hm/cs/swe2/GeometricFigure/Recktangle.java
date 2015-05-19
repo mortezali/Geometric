@@ -14,7 +14,8 @@ public class Recktangle extends GeometricFigure {
 
 	}
 
-	public double girthReckangle() {
+	@Override
+	public double girth() {
 		double result;
 		{
 			if (!this.quader)
@@ -28,7 +29,8 @@ public class Recktangle extends GeometricFigure {
 		return result;
 	}
 
-	public double areaRecktangle() {
+	@Override
+	public double area() {
 		double result;
 		{
 			if (!this.quader)
@@ -46,8 +48,8 @@ public class Recktangle extends GeometricFigure {
 	public void graphicsToString() {
 		System.out.println("Der nächste Figur ist ein Rechteck" + 
 				"----------------------------------------------------------------------------------\n" +
-				"Fläche: " + areaRecktangle() + "\n" + 
-				"Umfang: " + girthReckangle() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
+				"Fläche: " + area() + "\n" + 
+				"Umfang: " + girth() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
 
 
 		{
@@ -108,4 +110,6 @@ public class Recktangle extends GeometricFigure {
 		return quader;
 	}
 
+	
+	
 }

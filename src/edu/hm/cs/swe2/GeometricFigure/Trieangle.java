@@ -10,8 +10,8 @@ public class Trieangle extends GeometricFigure {
 		this.hight = hight;
 
 	}
-
-	public double girthTrieangle() {
+	@Override
+	public double girth() {
 		double result;
 		//U = 2a+c => 2x7 + X => 14+X
 
@@ -20,8 +20,8 @@ public class Trieangle extends GeometricFigure {
 		return result;
 	}
 	// A = 0.5xcxh => 0,5c.4
-
-	public double areaTrieangle() {
+	@Override
+	public double area() {
 		double result;
 
 		result = xExtent * hight;
@@ -33,8 +33,8 @@ public class Trieangle extends GeometricFigure {
 	public void graphicsToString() {
 		System.out.println("Der nächste Figur ist ein Dreieck" + 
 				"----------------------------------------------------------------------------------\n" +
-				"Fläche: " + areaTrieangle() + "\n" + 
-				"Umfang: " + girthTrieangle() + "Der Mittelpunkt des Dreiecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
+				"Fläche: " + area() + "\n" + 
+				"Umfang: " + girth() + "Der Mittelpunkt des Dreiecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
 
 
 	}
