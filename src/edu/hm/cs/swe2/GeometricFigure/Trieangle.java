@@ -19,7 +19,7 @@ public class Trieangle extends GeometricFigure {
 
 		return result;
 	}
-	// A = 0.5xcxh => 0,5c.4
+	// c = 2.sqrt{a^2 - h^2} => A = 0.5xcxh => 0,5c.4 => 0.5x11.5x4=23
 	@Override
 	public double area() {
 		double result;
