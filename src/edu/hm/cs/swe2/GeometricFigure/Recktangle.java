@@ -6,7 +6,7 @@ public class Recktangle extends GeometricFigure {
 	private double yExtent;
 	private boolean quader;
 
-	public Recktangle(double x, double y, boolean quader) {
+	public Recktangle(int xOffset, double x, double y, boolean quader) {
 		super();
 		this.xExtent = x;
 		this.yExtent = y;
@@ -44,10 +44,10 @@ public class Recktangle extends GeometricFigure {
 
 	@Override
 	public void graphicsToString() {
-		System.out.println("Der nächste Figur ist ein Kreis" + 
+		System.out.println("Der nächste Figur ist ein Rechteck" + 
 				"----------------------------------------------------------------------------------\n" +
 				"Fläche: " + areaRecktangle() + "\n" + 
-				"Umfang: " + girthReckangle() + "Der Mittelpunkt des kreises liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
+				"Umfang: " + girthReckangle() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
 
 
 		{

@@ -3,7 +3,7 @@ package edu.hm.cs.swe2.GeometricFigure;
 public class Circle extends GeometricFigure {
 	private double radius;
 
-	public Circle(int radius) {
+	public Circle(int xOffset, int radius) {
 		super();
 
 	}
