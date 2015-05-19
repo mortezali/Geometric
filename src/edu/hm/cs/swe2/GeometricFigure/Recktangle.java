@@ -46,19 +46,8 @@ public class Recktangle extends GeometricFigure {
 
 	@Override
 	public void graphicsToString() {
-		System.out.println("Der nächste Figur ist ein Rechteck" + 
-				"----------------------------------------------------------------------------------\n" +
-				"Fläche: " + area() + "\n" + 
-				"Umfang: " + girth() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
-
-
-		{
-			if (this.quader)
-				System.out.println("Dieser Figur ist sogar ein Quadrat");
-		}
-
+		
 	}
-
 	@Override
 	public void printGraphics() {
 		
@@ -99,7 +88,20 @@ public class Recktangle extends GeometricFigure {
 			  //return memoryString.toString();
 		  }
 
-	
+	@Override
+	public String toString() {
+		System.out.println("Der nächste Figur ist ein Rechteck" + 
+				"----------------------------------------------------------------------------------\n" +
+				"Fläche: " + area() + "\n" + 
+				"Umfang: " + girth() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
+
+
+		{
+			if (this.quader)
+				System.out.println("Dieser Figur ist sogar ein Quadrat");
+		}
+		return infotext;
+	}
 
 	public boolean isQuader() {
 		return true;

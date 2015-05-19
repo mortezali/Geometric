@@ -26,23 +26,22 @@ public class Circle extends GeometricFigure {
 
 	@Override
 	public void graphicsToString() {
-		System.out
-				.println("Der nächste Figur ist ein Kreis"
-						+ "----------------------------------------------------------------------------------\n"
-						+ "Fläche: " + area() + "\n" + "Umfang: "
-						+ girth() + "Der Mittelpunkt des kreises liegt "
-						+ getxOffset()
-						+ "Längeneinheiten vom linken Rand entfernt.");
-
+		System.out.println();
 	}
 
 	@Override
 	public void printGraphics() {
 
 	}
-
+	@Override
 	public String toString() {
-		return infotext;
+		return ("Der nächste Figur ist ein Kreis"
+				+ "----------------------------------------------------------------------------------\n"
+				+ "Fläche: " + area() + "\n" + "Umfang: "
+				+ girth() + "Der Mittelpunkt des kreises liegt "
+				+ getxOffset()
+				+ "Längeneinheiten vom linken Rand entfernt.");
+
 	}
 
 	public void printFigureInformation() {
