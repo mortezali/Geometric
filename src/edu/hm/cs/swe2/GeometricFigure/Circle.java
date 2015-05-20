@@ -35,12 +35,7 @@ public class Circle extends GeometricFigure {
 	}
 	@Override
 	public String toString() {
-		return ("Der nächste Figur ist ein Kreis"
-				+ "----------------------------------------------------------------------------------\n"
-				+ "Fläche: " + area() + "\n" + "Umfang: "
-				+ girth() + "Der Mittelpunkt des kreises liegt "
-				+ getxOffset()
-				+ "Längeneinheiten vom linken Rand entfernt.");
+		return super.toString() + 
 
 	}
 
