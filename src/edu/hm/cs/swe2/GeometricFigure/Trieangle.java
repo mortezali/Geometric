@@ -4,8 +4,8 @@ public class Trieangle extends GeometricFigure {
 	private double xExtent;
 	private double hight;
 
-	public Trieangle(int xOffset, double xExtent, double hight) {
-		super(xOffset);
+	public Trieangle(int xOffset, String infotext, double xExtent, double hight) {
+		super(xOffset, infotext);
 		this.xExtent = xExtent;
 		this.hight = hight;
 
@@ -29,11 +29,11 @@ public class Trieangle extends GeometricFigure {
 		return result;
 	}
 
-	@Override
+
 	public void graphicsToString() {
 	}
 
-	@Override
+
 	public void printGraphics() {
 		// TODO Auto-generated method stub
 

@@ -1,13 +1,13 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
-public class Recktangle extends GeometricFigure {
+public class Recktangle extends GeometricFigure implements GraphicToString, PrintGraphics{
 
 	private double xExtent;
 	private double yExtent;
 	private boolean quader = true;
 
-	public Recktangle(int xOffset, double x, double y) {
-		super(xOffset);
+	public Recktangle(int xOffset, String infotext, double x, double y) {
+		super(xOffset, infotext);
 		this.xExtent = x;
 		this.yExtent = y;
 		
@@ -44,11 +44,11 @@ public class Recktangle extends GeometricFigure {
 		return result;
 	}
 
-	@Override
+
 	public void graphicsToString() {
 		
 	}
-	@Override
+	
 	public void printGraphics() {
 		
 		 int xExtent =1;

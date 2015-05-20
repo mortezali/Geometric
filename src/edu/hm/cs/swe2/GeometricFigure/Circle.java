@@ -1,11 +1,11 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
 public class Circle extends GeometricFigure {
-	private static double radius;
+	private double radius;
 
-	public Circle(int xOffset, double radius) {
-		super(xOffset);
-		this.radius = radius;;
+	public Circle(int xOffset, String infotext, double radius) {
+		super(xOffset, infotext);
+		this.radius = radius;
 
 	}
 
@@ -24,18 +24,18 @@ public class Circle extends GeometricFigure {
 		
 	}
 
-	@Override
+
 	public void graphicsToString() {
 		System.out.println();
 	}
 
-	@Override
+	
 	public void printGraphics() {
 
 	}
 	@Override
 	public String toString() {
-		return super.toString() + 
+		return super.toString();
 
 	}
 
@@ -48,6 +48,6 @@ public class Circle extends GeometricFigure {
 	}
 
 	public void setRadius(double radius) {
-		Circle.radius = radius;
+		this.radius = radius;
 	}
 }
