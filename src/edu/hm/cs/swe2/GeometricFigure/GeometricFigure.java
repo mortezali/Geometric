@@ -24,9 +24,7 @@ public abstract class GeometricFigure {
 		return ("Der nächste Figur ist ein" + getInfotext()
 				+ "----------------------------------------------------------------------------------\n"
 				+ "Fläche: " + area() + "\n" + "Umfang: "
-				+ girth() + "Der Mittelpunkt des kreises liegt "
-				+ getxOffset()
-				+ "Längeneinheiten vom linken Rand entfernt.");
+				+ girth());
 
 	}
 

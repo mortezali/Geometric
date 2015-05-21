@@ -19,28 +19,17 @@ public class Circle extends GeometricFigure {
 	@Override
 	public double area(){
 		double result;
-		result = getRadius() * getRadius() * 3.1415;
+		result = getRadius() * getRadius() * Math.PI;
 		return result;
 		
 	}
 
-
-	public void graphicsToString() {
-		System.out.println();
-	}
-
-	
-	public void printGraphics() {
-
-	}
-	@Override
-	public String toString() {
-		return super.toString();
-
-	}
-
 	public void printFigureInformation() {
-		System.out.println(this.toString());
+		System.out.println(this.toString()  
+				
+				+ "\n\n"+ "Der Mittelpunkt des kreises liegt "
+				+ getxOffset() + getRadius()
+				+ "Längeneinheiten vom linken Rand entfernt.");
 	}
 
 	public double getRadius() {

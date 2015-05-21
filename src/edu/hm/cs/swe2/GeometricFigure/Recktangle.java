@@ -1,16 +1,25 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
-public class Recktangle extends GeometricFigure implements GraphicToString, PrintGraphics{
+public class Recktangle extends GeometricFigure implements IPrintable {
 
 	private double xExtent;
 	private double yExtent;
-	private boolean quader = true;
+	private boolean quader = false;
 
-	public Recktangle(int xOffset, String infotext, double x, double y) {
-		super(xOffset, infotext);
+	public Recktangle(int xOffset, double x, double y) {
+		super(xOffset, "Rechteck");
 		this.xExtent = x;
 		this.yExtent = y;
-		
+
+		if (this.xExtent == yExtent) {
+			this.quader = true;
+		}
+
+	}
+
+	public Recktangle(int xOffset, double x) {
+
+		this(xOffset, x, x);
 
 	}
 
@@ -44,67 +53,60 @@ public class Recktangle extends GeometricFigure implements GraphicToString, Prin
 		return result;
 	}
 
+	// public void graphicsToString() {
+	//
+	// }
 
-	public void graphicsToString() {
-		
-	}
-	
-	public void printGraphics() {
-		
-		 int xExtent =1;
-		  int yExtent = 1;
-		  
+	// public void printGraphics() {
+	//
+	// int xExtent =1;
+	// int yExtent = 1;
+	//
+	//
+	// StringBuilder memoryString = new StringBuilder();
+	//
+	// // < in <= ge�ndert
+	// for (yExtent = 1; yExtent <= xExtent; yExtent++) {
+	// // row = 1;
+	//
+	// for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
+	// if (xExtent + yExtent <= xExtent - 1)
+	// memoryString.append(" ");
+	//
+	// else if (xExtent - yExtent < xExtent - 2 && !(xExtent == yExtent))
+	// memoryString.append("*");
+	//
+	// else if (xExtent - yExtent == xExtent - 2 && !(xExtent == yExtent))
+	// memoryString.append("*\n");
+	//
+	// }
 
-			  StringBuilder memoryString = new StringBuilder();
-
-			  // < in <= ge�ndert
-			  for (yExtent = 1; yExtent <= xExtent; yExtent++) {
-			   // row = 1;
-
-			   for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
-			    if (xExtent + yExtent <= xExtent - 1)
-			     memoryString.append(" ");
-
-			    else if (xExtent - yExtent < xExtent - 2 && !(xExtent == yExtent))
-			     memoryString.append("*");
-
-			    else if (xExtent - yExtent == xExtent - 2 && !(xExtent == yExtent))
-			     memoryString.append("*\n");
-
-			   }
-
-//			   if (column == xExtent) {
-//			    int middle = (int) ((yExtent + 1) / 2);
-//
-//			    for (row = 1; row <= middle + (getTrunkTickness() / 2); row++) {
-//
-//			     if (middle - (getTrunkTickness() / 2) > row)
-//			      memoryString.append(" ");
-//			     else
-//			      memoryString.append("I");
-			    }
-			   
-
-			  //return memoryString.toString();
-		  }
+	// if (column == xExtent) {
+	// int middle = (int) ((yExtent + 1) / 2);
+	//
+	// for (row = 1; row <= middle + (getTrunkTickness() / 2); row++) {
+	//
+	// if (middle - (getTrunkTickness() / 2) > row)
+	// memoryString.append(" ");
+	// else
+	// memoryString.append("I");
+	// }
+	//
+	//
+	// //return memoryString.toString();
+	// }
 
 	@Override
 	public String toString() {
-		System.out.println("Der nächste Figur ist ein Rechteck" + 
-				"----------------------------------------------------------------------------------\n" +
-				"Fläche: " + area() + "\n" + 
-				"Umfang: " + girth() + "Der Mittelpunkt des Rechtecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
 
+		String output = super.toString();
 
-		{
-			if (this.quader)
-				System.out.println("Dieser Figur ist sogar ein Quadrat");
+		if (this.quader) {
+
+			output += "Dieser Figur ist sogar ein Quadrat";
 		}
-		return infotext;
-	}
 
-	public boolean isQuader() {
-		return true;
+		return output;
 	}
 
 	public boolean setQuader(boolean quader) {
@@ -113,5 +115,22 @@ public class Recktangle extends GeometricFigure implements GraphicToString, Prin
 	}
 
 	
-	
+	public String graphicsToString() {
+		
+		return null;
+	}
+
+
+	public void printGraphics() {
+		
+		System.out.println(graphicsToString());
+
+	}
+
+	@Override
+	public void printFigureInformation(){
+		
+		super.printFigureInformation();
+		printGraphics();
+	}
 }
