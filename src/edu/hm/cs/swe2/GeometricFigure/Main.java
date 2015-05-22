@@ -3,34 +3,39 @@ package edu.hm.cs.swe2.GeometricFigure;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+		Trieangle dreieck1 = new Trieangle(5, 7, 4);
+		Trieangle dreieck2 = new Trieangle(2, 6, 3);
+		Circle kreis1 = new Circle(4, 2);
+		Circle kreis2 = new Circle(0, 4);
+		Recktangle viereck1 = new Recktangle(3, 10, 4);
+		Recktangle viereck2 = new Recktangle(1, 5, 5);
+		
 		GeometricFigure[] figures = new GeometricFigure[] {
-				new Trieangle(5, 7, 4), new Circle(4, 2),
-				new Recktangle(3, 10, 4), new Trieangle(2, 6, 3),
-				new Recktangle(1, 5, 5), new Circle(0, 4),
-
-				
-				
-			
+				dreieck1, dreieck2, kreis1, kreis2, viereck1, viereck2
 		};
-//		public Object clone() throws CloneNotSupportedException {
-//
-//			Circle tmp = (Circle) super.clone();
-//
-//			return tmp;
-//		}
-//		
+		GeometricFigure[] cloneFigure = new GeometricFigure []{
+				new Trieangle (dreieck1), new Circle (kreis2), new Recktangle (viereck1), new Trieangle (dreieck2),
+				new Recktangle (viereck2), new Circle (kreis2),
+		};
 		
-		figures.toString();
-		System.out.println(figures.toString());
-		System.out.println();
-		
-		System.out.println(figures);
+	
+		for ( int i = 0; i < figures.length; i++){
+			
+			
+			figures[i].printFigureInformation();
 			
 		}
-
+		
+		for(int i = 0; i< figures.length; i++){
+			System.out.println("Vergleich identität:");
+			System.out.println(figures[i] == cloneFigure[i]);
+			System.out.println("Vergleich inhalt: ");
+			System.out.println( figures[i].equals(cloneFigure[i]));
+		}
+		
 
 			
 		}
-
+}
 	

@@ -39,7 +39,19 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable{
 	public String graphicsToString() {
 		
 		
-		return null;
+		int slopeOffset = (xExtent -1)/ 2;
+//		for (int j = 0; j < hight; j++) {
+//			for (int i = 0; i < xOffset + slopeOffset; i++) {
+//				System.out.print(" ");
+//			}
+//			for (int i = 0; i < xExtent - 2 * slopeOffset; i++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//			slopeOffset--;
+//		}
+//		System.out.println();
+
 		
 		
 	}
