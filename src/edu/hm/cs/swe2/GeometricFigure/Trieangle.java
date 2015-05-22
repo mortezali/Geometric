@@ -73,5 +73,6 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable{
 		
 		}
 	
-
+	//equals()
+		//hashCode()
 }

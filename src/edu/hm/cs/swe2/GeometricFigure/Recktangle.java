@@ -128,4 +128,7 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		super.printFigureInformation();
 		printGraphics();
 	}
+	
+	//equals()
+	//hashCode()
 }

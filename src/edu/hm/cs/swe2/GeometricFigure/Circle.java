@@ -43,4 +43,6 @@ public class Circle extends GeometricFigure {
 	public void setRadius(double radius) {
 		this.radius = radius;
 	}
+	//equals()
+		//hashCode()
 }

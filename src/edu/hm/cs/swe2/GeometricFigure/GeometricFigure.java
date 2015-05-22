@@ -42,6 +42,16 @@ public abstract class GeometricFigure {
 		return true;
 		
 	}
+	
+	@Override
+	public int hashCode(){
+		final int prime = 32;
+		int result = 1;
+		result = prime * result + xOffset;
+		result = prime * result + ((infotext == null) ? 0 : infotext.hashCode());
+		return result;
+		
+	}
 
 	public GeometricFigure(int xOffset, String infotext) {
 

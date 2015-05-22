@@ -29,12 +29,7 @@ public class Main {
 			
 		}
 
-	public Object clone() throws CloneNotSupportedException {
 
-		Circle tmp = (Circle) super.clone();
-
-		return tmp;
-	}
 			
 		}
 
