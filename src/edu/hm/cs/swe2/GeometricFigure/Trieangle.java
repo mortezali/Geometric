@@ -1,6 +1,6 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
-public class Trieangle extends GeometricFigure {
+public class Trieangle extends GeometricFigure implements IPrintable{
 	private double xExtent;
 	private double hight;
 
@@ -30,8 +30,10 @@ public class Trieangle extends GeometricFigure {
 	}
 
 
-	public void graphicsToString() {
+	public String graphicsToString() {
 		
+		
+		return null;
 		
 		
 	}
