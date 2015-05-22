@@ -53,49 +53,46 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		return result;
 	}
 
-	// public void graphicsToString() {
-	//
-	// }
+	public String graphicsToString() {
+	 
 
-	// public void printGraphics() {
-	//
-	// int xExtent =1;
-	// int yExtent = 1;
-	//
-	//
-	// StringBuilder memoryString = new StringBuilder();
-	//
-	// // < in <= ge�ndert
-	// for (yExtent = 1; yExtent <= xExtent; yExtent++) {
-	// // row = 1;
-	//
-	// for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
-	// if (xExtent + yExtent <= xExtent - 1)
-	// memoryString.append(" ");
-	//
-	// else if (xExtent - yExtent < xExtent - 2 && !(xExtent == yExtent))
-	// memoryString.append("*");
-	//
-	// else if (xExtent - yExtent == xExtent - 2 && !(xExtent == yExtent))
-	// memoryString.append("*\n");
-	//
-	// }
+	
+	 int xExtent = 1;
+	 int yExtent = 1;
+	
+	 StringBuilder memoryString = new StringBuilder();{
+	
+	 for (yExtent = 1; yExtent <= xExtent; yExtent++) {
+	 xExtent = 1;
+	
+	 for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
+	 if (xExtent + yExtent <= xExtent - 1)
+	 memoryString.append(" ");
+	
+	 else if (xExtent - yExtent < xExtent - 2 && !(xExtent == yExtent))
+	 memoryString.append("*");
+	
+	 else if (xExtent - yExtent == xExtent - 2 && !(xExtent == yExtent))
+	 memoryString.append("*\n");
+	
+	 }
+	 }
 
-	// if (column == xExtent) {
-	// int middle = (int) ((yExtent + 1) / 2);
-	//
-	// for (row = 1; row <= middle + (getTrunkTickness() / 2); row++) {
-	//
-	// if (middle - (getTrunkTickness() / 2) > row)
-	// memoryString.append(" ");
-	// else
-	// memoryString.append("I");
-	// }
-	//
-	//
-	// //return memoryString.toString();
-	// }
-
+	 if (yExtent == xExtent) {
+	 int middle = (int) ((yExtent + 1) / 2);
+	
+	 for (xExtent = 1; xExtent <= middle + (girth() / 2); xExtent++) {
+	
+	 if (middle - (girth() / 2) > xExtent)
+	 memoryString.append(" ");
+	 else
+	 memoryString.append("*");
+	 }
+	 }
+	
+	return memoryString.toString();
+	 }
+	}
 	@Override
 	public String toString() {
 
@@ -108,16 +105,10 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 
 		return output;
 	}
-
+	
 	public boolean setQuader(boolean quader) {
 		this.quader = true;
 		return quader;
-	}
-
-	
-	public String graphicsToString() {
-		
-		return null;
 	}
 
 

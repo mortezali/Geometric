@@ -4,8 +4,8 @@ public class Trieangle extends GeometricFigure {
 	private double xExtent;
 	private double hight;
 
-	public Trieangle(int xOffset, String infotext, double xExtent, double hight) {
-		super(xOffset, infotext);
+	public Trieangle(int xOffset, double xExtent, double hight) {
+		super(xOffset, "Dreieck");
 		this.xExtent = xExtent;
 		this.hight = hight;
 
@@ -31,11 +31,14 @@ public class Trieangle extends GeometricFigure {
 
 
 	public void graphicsToString() {
+		
+		
+		
 	}
 
 
 	public void printGraphics() {
-		// TODO Auto-generated method stub
+		System.out.println(graphicsToString());
 
 	}
 
@@ -56,11 +59,9 @@ public class Trieangle extends GeometricFigure {
 	}
 	@Override
 	public String toString() {
-		System.out.println("Der nächste Figur ist ein Dreieck" + 
-				"----------------------------------------------------------------------------------\n" +
-				"Fläche: " + area() + "\n" + 
-				"Umfang: " + girth() + "Der Mittelpunkt des Dreiecks liegt " + getxOffset() + "Längeneinheiten vom linken Rand entfernt.");
-		return infotext;
+
+		return super.toString();
+
+		
+		}
 	}
-	
-}

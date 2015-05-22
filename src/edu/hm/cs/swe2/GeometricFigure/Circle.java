@@ -3,8 +3,8 @@ package edu.hm.cs.swe2.GeometricFigure;
 public class Circle extends GeometricFigure {
 	private double radius;
 
-	public Circle(int xOffset, String infotext, double radius) {
-		super(xOffset, infotext);
+	public Circle(int xOffset, double radius) {
+		super(xOffset, "Kreis");
 		this.radius = radius;
 
 	}
