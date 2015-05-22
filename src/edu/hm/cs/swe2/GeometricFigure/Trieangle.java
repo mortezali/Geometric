@@ -1,6 +1,6 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
-public class Trieangle extends GeometricFigure implements IPrintable{
+public class Trieangle extends GeometricFigure implements IPrintable, Cloneable{
 	private double xExtent;
 	private double hight;
 
@@ -9,6 +9,12 @@ public class Trieangle extends GeometricFigure implements IPrintable{
 		this.xExtent = xExtent;
 		this.hight = hight;
 
+	}
+	
+	public Trieangle (Trieangle originalTrie){
+		// Oberer Konstruktor wird hier verwendet mit orginalen Objektvariablen
+		this(originalTrie.xOffset, originalTrie.xExtent, originalTrie.hight);
+		
 	}
 	@Override
 	public double girth() {
@@ -66,4 +72,6 @@ public class Trieangle extends GeometricFigure implements IPrintable{
 
 		
 		}
-	}
+	
+
+}

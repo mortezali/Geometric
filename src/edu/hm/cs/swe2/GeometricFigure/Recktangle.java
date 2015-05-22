@@ -16,6 +16,10 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		}
 
 	}
+	
+	public Recktangle(Recktangle originalReckt){
+		this(originalReckt.xOffset, originalReckt.xExtent, originalReckt.yExtent);
+	}
 
 	public Recktangle(int xOffset, double x) {
 

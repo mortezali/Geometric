@@ -12,6 +12,36 @@ public abstract class GeometricFigure {
 	public void setInfotext(String infotext) {
 		this.infotext = infotext;
 	}
+	@Override
+	public boolean equals(Object object){
+		//1) Vergleich auf Identität
+		if(this == object){
+		return true;
+		}
+		//2-a Wertgleiche Basisklassenobjekzte
+		if(!super.equals(object)) 
+			return false;
+		//2-b Vergleich mit Null
+		if(object == null) 
+			return false;
+		// 3. Testen auf selben Typ
+		if(getClass() != object.getClass())
+			return false;
+		// 4) Paarweiser Vergleich der Attribute
+		GeometricFigure other = (GeometricFigure) object;
+		// 5. Attribute mit primitivem Datentyp (int)
+		if (xOffset != other.xOffset)
+			return false;
+		//6. Refernce Typen Vergleich
+		if(infotext == null){
+			if(other.infotext != null)
+				return false;
+		}else if(!infotext.equals(other.infotext))
+			return false;
+		
+		return true;
+		
+	}
 
 	public GeometricFigure(int xOffset, String infotext) {
 

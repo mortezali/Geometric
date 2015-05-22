@@ -8,6 +8,9 @@ public class Circle extends GeometricFigure {
 		this.radius = radius;
 
 	}
+	public Circle(Circle origCircle){
+		this(origCircle.xOffset, origCircle.radius);
+	}
 
 	@Override
 	public double girth() {
@@ -23,6 +26,7 @@ public class Circle extends GeometricFigure {
 		return result;
 		
 	}
+	
 
 	public void printFigureInformation() {
 		System.out.println(this.toString()  
