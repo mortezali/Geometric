@@ -64,20 +64,20 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	 int xExtent = 1;
 	 int yExtent = 1;
 	
-	 StringBuilder memoryString = new StringBuilder();{
+	 StringBuilder graphicToString = new StringBuilder();{
 	
 	 for (yExtent = 1; yExtent <= xExtent; yExtent++) {
 	 xExtent = 1;
 	
 	 for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
 	 if (xExtent + yExtent <= xExtent - 1)
-	 memoryString.append(" ");
+		 graphicToString.append(" ");
 	
 	 else if (xExtent - yExtent < xExtent - 2 && !(xExtent == yExtent))
-	 memoryString.append("*");
+		 graphicToString.append("*");
 	
 	 else if (xExtent - yExtent == xExtent - 2 && !(xExtent == yExtent))
-	 memoryString.append("*\n");
+		 graphicToString.append("*\n");
 	
 	 }
 	 }
@@ -88,13 +88,13 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	 for (xExtent = 1; xExtent <= middle + (girth() / 2); xExtent++) {
 	
 	 if (middle - (girth() / 2) > xExtent)
-	 memoryString.append(" ");
+		 graphicToString.append(" ");
 	 else
-	 memoryString.append("*");
+		 graphicToString.append("*");
 	 }
 	 }
 	
-	return memoryString.toString();
+	return graphicToString.toString();
 	 }
 	}
 	@Override
@@ -104,7 +104,7 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 
 		if (this.quader) {
 
-			output += "Dieser Figur ist sogar ein Quadrat";
+			output += " \nDieser Figur ist sogar ein Quadrat";
 		}
 
 		return output;
@@ -129,6 +129,45 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		printGraphics();
 	}
 	
-	//equals()
-	//hashCode()
+	@Override
+	public boolean equals(Object object){
+		//1) Vergleich auf Identität
+		if(this == object){
+		return true;
+		}
+		//2-a Wertgleiche Basisklassenobjekzte
+		if(!super.equals(object)) 
+			return false;
+		//2-b Vergleich mit Null
+		if(object == null) 
+			return false;
+		// 3. Testen auf selben Typ
+		if(getClass() != object.getClass())
+			return false;
+		// 4) Paarweiser Vergleich der Attribute
+		GeometricFigure other = (GeometricFigure) object;
+		// 5. Attribute mit primitivem Datentyp (int)
+		if (xOffset != other.xOffset)
+			return false;
+		//6. Refernce Typen Vergleich
+//		if(infotext == null){
+//			if(other.infotext != null)
+//				return false;
+//		}
+//		else if(!infotext.equals(other.infotext))
+//			return false;
+//		
+		return true;
+		
+	}
+	
+	@Override
+	public int hashCode(){
+		final int prime = 32;
+		int result = 1;
+		result = prime * result + xOffset;
+		result = prime * result + ((infotext == null) ? 0 : infotext.hashCode());
+		return result;
+		
+	}
 }

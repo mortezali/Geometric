@@ -61,7 +61,7 @@ public abstract class GeometricFigure {
 	}
 
 	public String toString() {
-		return ("Der nächste Figur ist ein" + getInfotext()
+		return ("\n\nDer nächste Figur ist ein " + getInfotext() + "\n"
 				+ "----------------------------------------------------------------------------------\n"
 				+ "Fläche: " + area() + "\n" + "Umfang: "
 				+ girth());
