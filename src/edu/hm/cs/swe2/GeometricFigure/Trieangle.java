@@ -1,10 +1,18 @@
 package edu.hm.cs.swe2.GeometricFigure;
 
+<<<<<<< HEAD
 public class Trieangle extends GeometricFigure implements IPrintable, Cloneable {
 	private double xExtent;
 	private double height;
 
 	public Trieangle(int xOffset, double xExtent, double height) {
+=======
+public class Trieangle extends GeometricFigure implements IPrintable, Cloneable{
+	private int xExtent;
+	private int hight;
+
+	public Trieangle(int xOffset, int xExtent, int hight) {
+>>>>>>> cf4a7b92b069448298f94123ff7d0a861a2ec68c
 		super(xOffset, "Dreieck");
 		this.xExtent = xExtent;
 		this.height = height;
@@ -22,7 +30,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		double result;
 		// U = 2a+c => 2x7 + X => 14+X
 
-		result = 4 * xExtent / 2;
+		result = 4.0 * xExtent / 2;
 
 		return result;
 	}
@@ -38,6 +46,27 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	}
 
 	public String graphicsToString() {
+<<<<<<< HEAD
+=======
+		
+		
+		String output = "";
+		int slopeOffset = (xExtent - 1) / 2;
+		for (int j = 0; j < hight; j++) {
+			for (int i = 0; i < xOffset + slopeOffset; i++) {
+				output += " ";
+			}
+			for (int i = 0; i < xExtent - 2 * slopeOffset; i++) {
+				output += "*";
+			}
+			output += "\n";
+			slopeOffset--;
+		}
+		output += "\n";
+
+		return output;
+	}
+>>>>>>> cf4a7b92b069448298f94123ff7d0a861a2ec68c
 
 		int xExtent = (int) ((height - 1) / 2);
 		for (int j = 0; j < xExtent; j++) {
@@ -65,15 +94,20 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		return height;
 	}
 
+<<<<<<< HEAD
 	public void setHight(double hight) {
 		this.height = hight;
+=======
+	public void setHight(int hight) {
+		this.hight = hight;
+>>>>>>> cf4a7b92b069448298f94123ff7d0a861a2ec68c
 	}
 
 	public double getExtent() {
 		return this.xExtent;
 	}
 
-	public void setExtent(double xExtent) {
+	public void setExtent(int xExtent) {
 		this.xExtent = xExtent;
 	}
 
