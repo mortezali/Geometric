@@ -142,8 +142,14 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 				+ ((infotext == null) ? 0 : infotext.hashCode());
 		return result;
 
+	}	
+	@Override
+	public void printFigureInformation() {
+//		System.out.println(toString());
+		super.printFigureInformation();
+		System.out.println(graphicsToString());
+		
+		
 	}
-
-	
 	
 }

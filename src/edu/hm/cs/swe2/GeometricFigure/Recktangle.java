@@ -121,13 +121,6 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		System.out.println(graphicsToString());
 
 	}
-
-	@Override
-	public void printFigureInformation(){
-		
-		super.printFigureInformation();
-		printGraphics();
-	}
 	
 	@Override
 	public boolean equals(Object object){
@@ -168,6 +161,14 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		result = prime * result + xOffset;
 		result = prime * result + ((infotext == null) ? 0 : infotext.hashCode());
 		return result;
+		
+	}
+	
+	@Override
+	public void printFigureInformation() {
+		System.out.println(toString());
+		System.out.println(graphicsToString());
+		
 		
 	}
 }
