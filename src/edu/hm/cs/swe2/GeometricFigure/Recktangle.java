@@ -64,7 +64,7 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		
 		for(int y = 0; y < yExtent; y++){
 			for(int x = 0; x < xExtent + getxOffset(); x++){
-				if(x < getxOffset()){
+				if(x < getxOffset())
 					output += " ";
 					if(x < getxOffset() + xExtent && x > xOffset-1)
 						output+="*";
@@ -72,8 +72,8 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 						output += "\n";
 				}
 			}
-		}
-	return output;
+		
+		return output;
 		}
 
 //	public String graphicsToString() {
