@@ -7,7 +7,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 
 	public Trieangle(int xOffset, double xExtent, double hight) {
 		super(xOffset, "Dreieck");
-		this.xExtent = xExtent;
+		//this.xExtent = xExtent;
 		this.height = height;
 
 	}
@@ -23,7 +23,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		double result;
 		// U = 2a+c => 2x7 + X => 14+X
 
-		result = 4.0 * xExtent / 2;
+		result = height * xExtent / 2;
 
 		return result;
 	}
@@ -41,8 +41,8 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	public String graphicsToString() {
 		
 		String output = "";
-		int slopeOffset = (xExtent - 1) / 2;
-		for (int j = 0; j < hight; j++) {
+		int slopeOffset = (int) ((xExtent - 1) / 2);
+		for (int j = 0; j < height; j++) {
 			for (int i = 0; i < xOffset + slopeOffset; i++) {
 				output += " ";
 			}
@@ -57,19 +57,19 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		return output;
 	}
 
-		int xExtent = (int) ((height - 1) / 2);
-		for (int j = 0; j < xExtent; j++) {
-			for (int i = 0; i < xOffset + xExtent; i++) {
-				System.out.print(" ");
-			}
-			for (int i = 0; i < height - 2 * xExtent; i++) {
-				System.out.print("*");
-			}
-			System.out.println();
-			xExtent--;
-		}
+//		int xExtent = (int) ((height - 1) / 2);
+//		for (int j = 0; j < xExtent; j++) {
+//			for (int i = 0; i < xOffset + xExtent; i++) {
+//				System.out.print(" ");
+//			}
+//			for (int i = 0; i < height - 2 * xExtent; i++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//			xExtent--;
+		
 
-
+	@Override
 	public void printGraphics() {
 		System.out.println(graphicsToString());
 
@@ -85,7 +85,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	}
 	
 	public double getExtent() {
-		return this.xExtent;
+		return this.getExtent();
 	}
 
 	public void setExtent(int xExtent) {
@@ -143,4 +143,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		return result;
 
 	}
+
+	
+	
 }
