@@ -5,7 +5,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	private double height;
 
 
-	public Trieangle(int xOffset, double xExtent, double hight) {
+	public Trieangle(int xOffset, double xExtent, double height) {
 		super(xOffset, "Dreieck");
 		//this.xExtent = xExtent;
 		this.height = height;
