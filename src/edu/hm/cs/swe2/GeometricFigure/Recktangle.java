@@ -57,48 +57,66 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 		}
 		return result;
 	}
-
-	public String graphicsToString() {
-
-		int xExtent = 1;
-		int yExtent = 1;
-
-		StringBuilder graphicToString = new StringBuilder();
-		{
-
-			for (yExtent = 1; yExtent <= xExtent; yExtent++) {
-				xExtent = 1;
-
-				for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
-					if (xExtent + yExtent <= xExtent - 1)
-						graphicToString.append(" ");
-
-					else if (xExtent - yExtent < xExtent - 2
-							&& !(xExtent == yExtent))
-						graphicToString.append("*");
-
-					else if (xExtent - yExtent == xExtent - 2
-							&& !(xExtent == yExtent))
-						graphicToString.append("*\n");
-
+	
+	public String graphicsToString(){
+		
+		String output = "";
+		
+		for(int y = 0; y < yExtent; y++){
+			for(int x = 0; x < xExtent + getxOffset(); x++){
+				if(x < getxOffset()){
+					output += " ";
+					if(x < getxOffset() + xExtent && x > xOffset-1)
+						output+="*";
+					if(x == xOffset + xExtent -1)
+						output += "\n";
 				}
 			}
-
-			if (yExtent == xExtent) {
-				int middle = (int) ((yExtent + 1) / 2);
-
-				for (xExtent = 1; xExtent <= middle + (girth() / 2); xExtent++) {
-
-					if (middle - (girth() / 2) > xExtent)
-						graphicToString.append(" ");
-					else
-						graphicToString.append("*");
-				}
-			}
-
-			return graphicToString.toString();
 		}
-	}
+	return output;
+		}
+
+//	public String graphicsToString() {
+//
+//		int xExtent = 1;
+//		int yExtent = 1;
+//
+//		StringBuilder graphicToString = new StringBuilder();
+//		{
+//
+//			for (yExtent = 1; yExtent <= xExtent; yExtent++) {
+//				xExtent = 1;
+//
+//				for (xExtent = 1; xExtent - yExtent <= xExtent - 2; xExtent++) {
+//					if (xExtent + yExtent <= xExtent - 1)
+//						graphicToString.append(" ");
+//
+//					else if (xExtent - yExtent < xExtent - 2
+//							&& !(xExtent == yExtent))
+//						graphicToString.append("*");
+//
+//					else if (xExtent - yExtent == xExtent - 2
+//							&& !(xExtent == yExtent))
+//						graphicToString.append("*\n");
+//
+//				}
+//			}
+//
+//			if (yExtent == xExtent) {
+//				int middle = (int) ((yExtent + 1) / 2);
+//
+//				for (xExtent = 1; xExtent <= middle + (girth() / 2); xExtent++) {
+//
+//					if (middle - (girth() / 2) > xExtent)
+//						graphicToString.append(" ");
+//					else
+//						graphicToString.append("*");
+//				}
+//			}
+//
+//			return graphicToString.toString();
+//		}
+//	}
 
 	@Override
 	public String toString() {
@@ -121,7 +139,7 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	public void printFigureInformation() {
 		// System.out.println(toString());
 		super.printFigureInformation();
-		System.out.println(graphicsToString());
+		printGraphics();
 
 	}
 
