@@ -166,7 +166,8 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	
 	@Override
 	public void printFigureInformation() {
-		System.out.println(toString());
+//		System.out.println(toString());
+		super.printFigureInformation();
 		System.out.println(graphicsToString());
 		
 		
