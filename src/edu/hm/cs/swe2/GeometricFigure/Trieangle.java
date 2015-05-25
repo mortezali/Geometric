@@ -7,7 +7,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 
 	public Trieangle(int xOffset, double xExtent, double height) {
 		super(xOffset, "Dreieck");
-		//this.xExtent = xExtent;
+		this.xExtent = xExtent;
 		this.height = height;
 
 	}
@@ -23,7 +23,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		double result;
 		// U = 2a+c => 2x7 + X => 14+X
 
-		result = height * xExtent / 2;
+		result = (double) height * xExtent / 2;
 
 		return result;
 	}
@@ -33,7 +33,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	public double area() {
 		double result;
 
-		result = xExtent * height;
+		result = (double) xExtent * height;
 
 		return result;
 	}
