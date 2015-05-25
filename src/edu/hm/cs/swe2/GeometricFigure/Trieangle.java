@@ -74,6 +74,20 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		System.out.println(graphicsToString());
 
 	}
+	@Override
+	public String toString() {
+
+		return super.toString();
+
+	}
+	@Override
+	public void printFigureInformation() {
+//		System.out.println(toString());
+		super.printFigureInformation();
+		System.out.println(graphicsToString());
+		
+		
+	}
 
 	public double getHight() {
 		return height;
@@ -92,12 +106,8 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		this.xExtent = xExtent;
 	}
 
-	@Override
-	public String toString() {
-
-		return super.toString();
-
-	}
+	
+	
 
 	@Override
 	public boolean equals(Object object) {
@@ -143,13 +153,5 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		return result;
 
 	}	
-	@Override
-	public void printFigureInformation() {
-//		System.out.println(toString());
-		super.printFigureInformation();
-		System.out.println(graphicsToString());
-		
-		
-	}
 	
 }
