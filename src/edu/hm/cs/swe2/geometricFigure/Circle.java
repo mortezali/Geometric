@@ -1,4 +1,4 @@
-package edu.hm.cs.swe2.GeometricFigure;
+package edu.hm.cs.swe2.geometricFigure;
 
 public class Circle extends GeometricFigure {
 	private double radius;
