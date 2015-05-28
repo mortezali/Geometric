@@ -6,7 +6,7 @@ public class Main {
 		
 		Trieangle dreieck1 = new Trieangle(5, 7, 4);
 		Circle kreis1 = new Circle(4, 2);
-		Recktangle viereck1 = new Recktangle(3, 10, 4);
+		Recktangle viereck1 = new Recktangle(3, 4, 10);
 		
 		Trieangle dreieck2 = new Trieangle(2, 6, 3);
 		Recktangle viereck2 = new Recktangle(1, 5, 5);

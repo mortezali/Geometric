@@ -23,7 +23,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 		double result;
 		// U = 2a+c => 2x7 + X => 14+X
 
-		result = (double) height * xExtent / 2;
+		result = (double) xExtent  + 2 * Math.sqrt((height * height + (xExtent * xExtent) / 4.0));
 
 		return result;
 	}
@@ -33,7 +33,7 @@ public class Trieangle extends GeometricFigure implements IPrintable, Cloneable 
 	public double area() {
 		double result;
 
-		result = (double) xExtent  + 2 * Math.sqrt((height * height + (xExtent * xExtent) / 4.0));
+		result = (double) height * xExtent / 2;
 
 		return result;
 	}

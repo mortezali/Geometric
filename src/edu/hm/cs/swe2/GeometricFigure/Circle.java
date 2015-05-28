@@ -4,7 +4,8 @@ public class Circle extends GeometricFigure {
 	private double radius;
 
 	public Circle(int xOffset, double radius) {
-		super(xOffset, "Kreis");
+
+	super(xOffset, "Kreis");
 		this.radius = radius;
 
 	}

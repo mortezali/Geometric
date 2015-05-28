@@ -31,11 +31,11 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	@Override
 	public double girth() {
 		double result;
-		{
-			if (!this.quader)
-				result = 2 * xExtent + 2 * yExtent;
+		
+			if (!this.quader){
+				result = (2 * xExtent) + (2 * yExtent);
 		}
-		{
+			else {
 
 			result = 4 * xExtent;
 		}
@@ -46,12 +46,11 @@ public class Recktangle extends GeometricFigure implements IPrintable {
 	@Override
 	public double area() {
 		double result;
-		{
-			if (!this.quader)
+		
+			if (!this.quader){
 
-				result = xExtent * yExtent;
-		}
-		{
+				result = (xExtent * yExtent);
+		} else  {
 
 			result = xExtent * xExtent;
 		}
